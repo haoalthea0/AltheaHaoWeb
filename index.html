@@ -1,0 +1,1675 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>郝天淏 Althea Hao | AI Builder · Travel Influencer · Urban Analyst</title>
+  <style>
+    :root {
+      --taro: #9b7cc6;
+      --taro-deep: #5c477e;
+      --taro-soft: #efe8fb;
+      --pink: #ffeeef;
+      --pink-deep: #d89185;
+      --cream: #fffaf6;
+      --mint: #deefe6;
+      --blue: #e4f0f9;
+      --butter: #fff0bd;
+      --paper: rgba(255, 255, 255, 0.82);
+      --ink: #302a35;
+      --muted: #766a7a;
+      --line: rgba(112, 84, 140, 0.18);
+      --shadow: 0 18px 48px rgba(92, 69, 123, 0.14);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      color: var(--ink);
+      background:
+        linear-gradient(135deg, rgba(255, 250, 246, 0.96), rgba(247, 239, 255, 0.92) 48%, rgba(255, 244, 239, 0.96)),
+        repeating-linear-gradient(90deg, rgba(155, 124, 198, 0.05) 0 1px, transparent 1px 68px),
+        repeating-linear-gradient(180deg, rgba(244, 199, 189, 0.05) 0 1px, transparent 1px 68px);
+      font-family: "Inter", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+      line-height: 1.68;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .page {
+      width: min(1160px, calc(100% - 34px));
+      margin: 0 auto;
+      padding: 24px 0 66px;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 14px;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 12px 14px;
+      margin-bottom: 26px;
+      border: 1px solid rgba(255, 255, 255, 0.78);
+      border-radius: 999px;
+      background: rgba(255, 250, 246, 0.76);
+      box-shadow: 0 14px 34px rgba(92, 69, 123, 0.12);
+      backdrop-filter: blur(18px);
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      min-width: max-content;
+      color: var(--taro-deep);
+      font-weight: 850;
+    }
+
+    .brand-mark {
+      width: 36px;
+      height: 36px;
+      display: block;
+      overflow: hidden;
+      border-radius: 8px;
+      color: #fff;
+      background: rgba(255, 255, 255, 0.74);
+      box-shadow: 0 10px 22px rgba(155, 124, 198, 0.26);
+    }
+
+    .brand-mark img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transform: scale(1.28);
+    }
+
+    .nav {
+      display: flex;
+      justify-content: flex-end;
+      gap: 6px;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .nav a {
+      position: relative;
+      min-width: 126px;
+      padding: 10px 14px 11px;
+      border: 1px solid rgba(155, 124, 198, 0.2);
+      border-radius: 8px 8px 0 0;
+      color: var(--taro-deep);
+      background: rgba(238, 231, 249, 0.74);
+      font-size: 12px;
+      font-weight: 850;
+      letter-spacing: 0.07em;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .nav a:hover {
+      color: var(--taro-deep);
+      background: #fff;
+      transform: translateY(-3px);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) 300px;
+      gap: 28px;
+      align-items: center;
+      padding: clamp(24px, 5vw, 52px);
+      margin-bottom: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      border-radius: 8px;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.78), rgba(255, 242, 238, 0.78));
+      box-shadow: var(--shadow);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      width: fit-content;
+      margin-bottom: 18px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      color: var(--taro-deep);
+      background: rgba(155, 124, 198, 0.12);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--pink-deep);
+    }
+
+    h1 {
+      max-width: 780px;
+      color: var(--ink);
+      font-size: clamp(42px, 7vw, 82px);
+      line-height: 0.98;
+      letter-spacing: 0;
+    }
+
+    .hero-hi {
+      display: inline-block;
+      margin-right: 16px;
+      color: var(--ink);
+      font-size: clamp(28px, 3.4vw, 46px);
+      font-weight: 760;
+      vertical-align: baseline;
+    }
+
+    h1 span,
+    h2 em {
+      color: var(--taro);
+      font-style: normal;
+    }
+
+    .lead {
+      max-width: 720px;
+      margin-top: 22px;
+      color: var(--muted);
+      font-size: clamp(16px, 2vw, 19px);
+    }
+
+    .identity-lines {
+      display: grid;
+      gap: 8px;
+      margin-top: 22px;
+      color: var(--muted);
+      font-size: clamp(18px, 2.1vw, 27px);
+      line-height: 1.42;
+    }
+
+    .identity-lines p {
+      margin: 0;
+    }
+
+    .identity-highlight {
+      display: inline;
+      padding: 0 5px 2px;
+      color: var(--ink);
+      font-weight: 760;
+      background: linear-gradient(180deg, transparent 46%, rgba(155, 124, 198, 0.2) 46%);
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+    }
+
+    .identity-highlight.pink {
+      background: linear-gradient(180deg, transparent 46%, rgba(255, 238, 239, 0.95) 46%);
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 26px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 38px;
+      padding: 8px 14px;
+      border: 1px solid rgba(155, 124, 198, 0.2);
+      border-radius: 999px;
+      color: var(--taro-deep);
+      background: rgba(255, 255, 255, 0.72);
+      font-size: 14px;
+      font-weight: 720;
+      white-space: nowrap;
+    }
+
+    .profile-card {
+      padding: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.88);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.62);
+      box-shadow: 0 16px 40px rgba(92, 69, 123, 0.12);
+      backdrop-filter: blur(14px);
+    }
+
+    .portrait {
+      width: 152px;
+      height: 188px;
+      margin: 0 auto 16px;
+      overflow: hidden;
+      border: 8px solid rgba(255, 255, 255, 0.9);
+      border-radius: 8px;
+      background: var(--taro-soft);
+      box-shadow: 0 16px 34px rgba(92, 69, 123, 0.16);
+      transform: rotate(-2deg);
+    }
+
+    .portrait img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 72% 50%;
+    }
+
+    .portrait.home-cutout {
+      width: 190px;
+      height: 236px;
+      overflow: visible;
+      border: 0;
+      background: transparent;
+      box-shadow: none;
+      transform: rotate(-3deg);
+    }
+
+    .portrait.home-cutout img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+      opacity: 1;
+      filter: drop-shadow(0 18px 24px rgba(92, 69, 123, 0.2));
+    }
+
+    .profile-card h2 {
+      margin-bottom: 4px;
+      color: var(--taro-deep);
+      font-size: 25px;
+      line-height: 1.15;
+      text-align: center;
+    }
+
+    .profile-card p {
+      color: var(--muted);
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .contact-mini {
+      display: grid;
+      gap: 8px;
+      margin-top: 16px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .contact-mini span,
+    .contact-mini a {
+      display: grid;
+      grid-template-columns: 24px 1fr;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .dot {
+      width: 24px;
+      height: 24px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      color: #fff;
+      background: var(--taro);
+      font-size: 12px;
+      font-weight: 800;
+      font-style: normal;
+    }
+
+    .section-card {
+      margin-bottom: 42px;
+      overflow: hidden;
+      padding: clamp(26px, 4vw, 48px);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      border-radius: 8px;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.78), rgba(255, 242, 238, 0.78));
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(14px);
+    }
+
+    .section-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 22px;
+      width: min(1040px, 100%);
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    .section-badge {
+      min-height: 92px;
+      display: grid;
+      grid-template-columns: 76px minmax(0, 1fr);
+      align-items: center;
+      gap: 28px;
+      padding: 18px 34px;
+      border-radius: 8px;
+      color: var(--taro-deep);
+      background: var(--taro-soft);
+      box-shadow: 0 12px 30px rgba(92, 69, 123, 0.08);
+    }
+
+    .section-card:nth-of-type(3) .section-badge {
+      background: var(--pink);
+    }
+
+    .section-card:nth-of-type(4) .section-badge {
+      color: #476d5d;
+      background: var(--mint);
+    }
+
+    .section-card:nth-of-type(5) .section-badge {
+      color: #79622d;
+      background: var(--butter);
+    }
+
+    .badge-kicker {
+      display: none;
+    }
+
+    .badge-symbol {
+      position: relative;
+      width: 48px;
+      height: 48px;
+      border-radius: 8px;
+      background: rgba(93, 71, 132, 0.78);
+      box-shadow: 0 12px 24px rgba(92, 69, 123, 0.18);
+    }
+
+    .badge-symbol::before,
+    .badge-symbol::after {
+      content: "";
+      position: absolute;
+      background: rgba(255, 255, 255, 0.86);
+    }
+
+    .icon-ai::before {
+      width: 24px;
+      height: 24px;
+      left: 12px;
+      top: 12px;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 50% 50%, rgba(255,255,255,0.9) 0 3px, transparent 4px),
+        conic-gradient(from 45deg, transparent 0 12%, rgba(255,255,255,0.88) 12% 20%, transparent 20% 37%, rgba(255,255,255,0.88) 37% 45%, transparent 45% 62%, rgba(255,255,255,0.88) 62% 70%, transparent 70% 87%, rgba(255,255,255,0.88) 87% 95%, transparent 95%);
+    }
+
+    .icon-ai::after {
+      width: 8px;
+      height: 8px;
+      right: 10px;
+      top: 10px;
+      border-radius: 50%;
+    }
+
+    .icon-travel::before {
+      width: 24px;
+      height: 4px;
+      left: 12px;
+      top: 23px;
+      border-radius: 99px;
+      transform: rotate(-24deg);
+    }
+
+    .icon-travel::after {
+      width: 11px;
+      height: 11px;
+      right: 11px;
+      top: 13px;
+      clip-path: polygon(0 0, 100% 50%, 0 100%, 24% 50%);
+    }
+
+    .icon-urban::before {
+      width: 24px;
+      height: 18px;
+      left: 12px;
+      bottom: 11px;
+      clip-path: polygon(50% 0, 100% 42%, 100% 100%, 0 100%, 0 42%);
+    }
+
+    .icon-urban::after {
+      width: 8px;
+      height: 12px;
+      left: 20px;
+      bottom: 11px;
+      background: rgba(93, 71, 132, 0.78);
+      border-radius: 4px 4px 0 0;
+    }
+
+    .icon-box::before {
+      width: 24px;
+      height: 24px;
+      left: 12px;
+      top: 12px;
+      background:
+        linear-gradient(90deg, transparent 47%, rgba(93, 71, 132, 0.78) 47% 53%, transparent 53%),
+        linear-gradient(180deg, transparent 47%, rgba(93, 71, 132, 0.78) 47% 53%, transparent 53%),
+        rgba(255, 255, 255, 0.86);
+      border-radius: 5px;
+    }
+
+    .badge-title {
+      justify-self: end;
+      color: var(--taro-deep);
+      font-family: "Mograph", "Century Gothic", "Avenir Next", "Montserrat", "Trebuchet MS", sans-serif;
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 400;
+      line-height: 1;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .badge-title strong {
+      margin-left: 14px;
+      font-size: clamp(38px, 6vw, 64px);
+      font-weight: 700;
+      line-height: 0.92;
+    }
+
+    .section-content-card {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(24px, 4vw, 42px);
+      border: 1px solid rgba(118, 106, 122, 0.22);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.82);
+      box-shadow: 0 12px 34px rgba(92, 69, 123, 0.08);
+    }
+
+    .section-content-card > :not(.section-cutout) {
+      position: relative;
+      z-index: 1;
+    }
+
+    .section-cutout {
+      position: absolute;
+      z-index: 0;
+      pointer-events: none;
+      width: clamp(132px, 17vw, 230px);
+      opacity: 0.3;
+      filter: drop-shadow(0 18px 24px rgba(92, 69, 123, 0.18));
+    }
+
+    .cutout-ai {
+      right: 24px;
+      top: 18px;
+      transform: rotate(5deg);
+    }
+
+    .cutout-travel {
+      right: 26px;
+      top: 18px;
+      transform: rotate(-4deg);
+    }
+
+    .cutout-urban {
+      right: 30px;
+      bottom: 22px;
+      transform: rotate(3deg);
+    }
+
+    .cutout-ability {
+      right: 30px;
+      top: 24px;
+      transform: rotate(-6deg);
+    }
+
+    .section-label {
+      margin-bottom: 8px;
+      color: var(--pink-deep);
+      font-size: 13px;
+      font-weight: 850;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      color: var(--ink);
+      font-size: clamp(27px, 4vw, 42px);
+      line-height: 1.12;
+      letter-spacing: 0;
+    }
+
+    .section-copy {
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .proof-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .proof {
+      min-height: 92px;
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.72);
+    }
+
+    .proof strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--taro-deep);
+      font-size: 24px;
+      line-height: 1;
+    }
+
+    .proof span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .experience-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 14px;
+      margin-top: 20px;
+    }
+
+    .experience {
+      min-height: 0;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.72);
+    }
+
+    .experience .meta {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+      color: var(--pink-deep);
+      font-size: 13px;
+      font-weight: 760;
+    }
+
+    .experience h3 {
+      margin-bottom: 10px;
+      color: var(--taro-deep);
+      font-size: 20px;
+      line-height: 1.22;
+    }
+
+    .clean-list {
+      display: grid;
+      gap: 8px;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .clean-list li::marker {
+      color: var(--pink-deep);
+    }
+
+    .dashboard {
+      margin-top: 20px;
+      padding: 18px;
+      border: 1px solid rgba(155, 124, 198, 0.18);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.78);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.82);
+    }
+
+    .dash-top {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 210px;
+      gap: 18px;
+      align-items: stretch;
+      margin-bottom: 16px;
+    }
+
+    .account-card,
+    .rank-card,
+    .chart-card,
+    .content-card {
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    .account-head {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+
+    .avatar {
+      width: 58px;
+      height: 58px;
+      overflow: hidden;
+      border: 4px solid var(--taro-soft);
+      border-radius: 50%;
+      background: var(--pink);
+      flex: 0 0 auto;
+    }
+
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .account-head h3,
+    .chart-card h3,
+    .content-card h3,
+    .rank-card h3 {
+      color: var(--taro-deep);
+      font-size: 20px;
+      line-height: 1.18;
+    }
+
+    .account-head p,
+    .rank-card p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .profile-stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .profile-stat {
+      padding: 12px;
+      border-radius: 8px;
+      background: var(--taro-soft);
+      text-align: center;
+    }
+
+    .profile-stat:nth-child(2) {
+      background: #fff1ee;
+    }
+
+    .profile-stat:nth-child(3) {
+      background: var(--mint);
+    }
+
+    .profile-stat b {
+      display: block;
+      color: var(--taro-deep);
+      font-size: 24px;
+      line-height: 1;
+    }
+
+    .profile-stat span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .rank-card {
+      display: grid;
+      align-content: center;
+      text-align: center;
+    }
+
+    .rank-orbit {
+      position: relative;
+      width: 126px;
+      height: 126px;
+      margin: 0 auto 12px;
+      border: 1px dashed rgba(155, 124, 198, 0.32);
+      border-radius: 50%;
+      background:
+        radial-gradient(circle, rgba(155, 124, 198, 0.14) 0 31%, transparent 32%),
+        conic-gradient(from 20deg, rgba(155, 124, 198, 0.55), rgba(244, 199, 189, 0.35), rgba(155, 124, 198, 0.08));
+    }
+
+    .rank-orbit::after {
+      content: "96%";
+      position: absolute;
+      inset: 36px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      color: var(--taro-deep);
+      background: #fff;
+      font-size: 24px;
+      font-weight: 900;
+    }
+
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .metric {
+      min-height: 98px;
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    .metric b {
+      display: block;
+      margin: 4px 0;
+      color: var(--taro-deep);
+      font-size: 24px;
+      line-height: 1;
+    }
+
+    .metric small,
+    .metric span {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .metric .up {
+      color: #cf7e74;
+      font-weight: 800;
+    }
+
+    .metric .down {
+      color: #69a07f;
+      font-weight: 800;
+    }
+
+    .dash-charts {
+      display: grid;
+      grid-template-columns: minmax(0, 1.22fr) minmax(260px, 0.78fr);
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+
+    .line-chart {
+      position: relative;
+      height: 230px;
+      margin-top: 14px;
+      border-left: 1px solid rgba(118, 106, 122, 0.22);
+      border-bottom: 1px solid rgba(118, 106, 122, 0.22);
+      background:
+        linear-gradient(to top, rgba(155, 124, 198, 0.08) 1px, transparent 1px) 0 0 / 100% 25%;
+    }
+
+    .line-chart svg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      overflow: visible;
+    }
+
+    .line-chart text {
+      fill: var(--muted);
+      font-size: 11px;
+    }
+
+    .donut-wrap {
+      display: grid;
+      grid-template-columns: 150px minmax(0, 1fr);
+      gap: 18px;
+      align-items: center;
+      margin-top: 18px;
+    }
+
+    .donut {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background: conic-gradient(var(--taro) 0 86%, #f5a9bd 86% 89%, #f8ccd8 89% 91%, #f3dbe6 91% 100%);
+      position: relative;
+    }
+
+    .donut::after {
+      content: "";
+      position: absolute;
+      inset: 30px;
+      border-radius: 50%;
+      background: #fff;
+    }
+
+    .source-list {
+      display: grid;
+      gap: 10px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .source-list b {
+      color: var(--taro-deep);
+      font-size: 20px;
+    }
+
+    .source-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px dashed var(--line);
+    }
+
+    .content-list {
+      display: grid;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .content-item {
+      display: grid;
+      grid-template-columns: 54px minmax(0, 1fr) auto;
+      gap: 12px;
+      align-items: center;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 250, 246, 0.78);
+    }
+
+    .thumb {
+      width: 54px;
+      height: 54px;
+      display: grid;
+      place-items: center;
+      border-radius: 8px;
+      color: var(--taro-deep);
+      background: var(--taro-soft);
+      font-weight: 900;
+    }
+
+    .content-item h4 {
+      color: var(--ink);
+      font-size: 15px;
+      line-height: 1.25;
+    }
+
+    .content-item p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .content-item strong {
+      color: var(--pink-deep);
+      white-space: nowrap;
+    }
+
+    .urban-grid {
+      display: grid;
+      grid-template-columns: 220px minmax(0, 1fr);
+      gap: 18px;
+      align-items: stretch;
+      margin-top: 18px;
+    }
+
+    .travel-photo {
+      overflow: hidden;
+      border: 8px solid rgba(255, 255, 255, 0.72);
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: 0 14px 28px rgba(92, 69, 123, 0.12);
+    }
+
+    .travel-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 55% 52%;
+    }
+
+    .travel-photo.cutout-frame {
+      display: grid;
+      place-items: center;
+      overflow: visible;
+      border: 0;
+      background: transparent;
+      box-shadow: none;
+    }
+
+    .travel-photo.cutout-frame img {
+      width: min(100%, 220px);
+      height: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 18px 24px rgba(92, 69, 123, 0.2));
+    }
+
+    .research-cards {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .research-card {
+      min-height: 128px;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.68);
+    }
+
+    .research-card h3 {
+      margin-bottom: 7px;
+      color: var(--taro-deep);
+      font-size: 17px;
+    }
+
+    .research-card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .folder-tabs {
+      position: relative;
+      margin-top: 20px;
+      padding-top: 14px;
+    }
+
+    .folder-tabs input {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .tab-strip {
+      display: flex;
+      align-items: end;
+      gap: 4px;
+      padding-left: 18px;
+      overflow-x: auto;
+    }
+
+    .tab-strip label {
+      position: relative;
+      min-width: 150px;
+      padding: 13px 18px 14px;
+      border: 1px solid rgba(155, 124, 198, 0.2);
+      border-bottom: 0;
+      border-radius: 8px 8px 0 0;
+      color: var(--taro-deep);
+      background: rgba(238, 231, 249, 0.84);
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 820;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .tab-strip label:nth-child(2) {
+      background: rgba(244, 199, 189, 0.82);
+    }
+
+    .tab-strip label:nth-child(3) {
+      color: #466c5c;
+      background: rgba(222, 239, 230, 0.86);
+    }
+
+    .tab-strip label:nth-child(4) {
+      color: #79622d;
+      background: rgba(255, 240, 189, 0.9);
+    }
+
+    .tab-strip label:hover {
+      transform: translateY(-4px);
+    }
+
+    #folder-ai:checked ~ .tab-strip label[for="folder-ai"],
+    #folder-product:checked ~ .tab-strip label[for="folder-product"],
+    #folder-data:checked ~ .tab-strip label[for="folder-data"],
+    #folder-visual:checked ~ .tab-strip label[for="folder-visual"] {
+      z-index: 3;
+      background: #fff;
+      transform: translateY(-8px);
+      box-shadow: 0 -8px 22px rgba(92, 69, 123, 0.08);
+    }
+
+    .folder-body {
+      overflow: hidden;
+      min-height: 314px;
+      padding: 28px;
+      border: 1px solid rgba(155, 124, 198, 0.2);
+      border-radius: 8px;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.86), rgba(255, 250, 246, 0.78));
+    }
+
+    .folder-panel {
+      display: none;
+      grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+      gap: 22px;
+      align-items: center;
+    }
+
+    #folder-ai:checked ~ .folder-body .panel-ai,
+    #folder-product:checked ~ .folder-body .panel-product,
+    #folder-data:checked ~ .folder-body .panel-data,
+    #folder-visual:checked ~ .folder-body .panel-visual {
+      display: grid;
+    }
+
+    .folder-title {
+      padding: 22px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.74);
+      box-shadow: 0 12px 28px rgba(92, 69, 123, 0.08);
+    }
+
+    .folder-title h3 {
+      margin-bottom: 10px;
+      color: var(--taro-deep);
+      font-size: 28px;
+      line-height: 1.12;
+    }
+
+    .folder-title p {
+      color: var(--muted);
+    }
+
+    .stacked-cards {
+      position: relative;
+      min-height: 242px;
+    }
+
+    .skill-note {
+      position: absolute;
+      width: min(92%, 440px);
+      min-height: 112px;
+      padding: 18px;
+      border: 1px solid rgba(155, 124, 198, 0.16);
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: 0 14px 30px rgba(92, 69, 123, 0.12);
+    }
+
+    .skill-note:nth-child(1) {
+      top: 0;
+      left: 0;
+      transform: rotate(-2deg);
+    }
+
+    .skill-note:nth-child(2) {
+      top: 62px;
+      left: 42px;
+      background: #fff7f4;
+      transform: rotate(1deg);
+    }
+
+    .skill-note:nth-child(3) {
+      top: 124px;
+      left: 84px;
+      background: #f7fbff;
+      transform: rotate(-1deg);
+    }
+
+    .skill-note b {
+      display: block;
+      margin-bottom: 7px;
+      color: var(--taro-deep);
+    }
+
+    .skill-note span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .footer {
+      margin-top: 24px;
+      padding: 30px;
+      border-radius: 8px;
+      color: var(--taro-deep);
+      background: linear-gradient(135deg, rgba(238, 231, 249, 0.9), rgba(244, 199, 189, 0.82));
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    .footer h2 {
+      margin-bottom: 8px;
+      color: var(--taro-deep);
+      font-size: clamp(24px, 4vw, 38px);
+    }
+
+    .footer p {
+      color: var(--muted);
+    }
+
+    @media (max-width: 980px) {
+      .hero,
+      .section-inner,
+      .folder-panel,
+      .dash-top,
+      .dash-charts,
+      .urban-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .profile-card {
+        width: min(100%, 420px);
+      }
+
+      .section-badge {
+        min-height: 150px;
+      }
+
+      .badge-title {
+        justify-self: end;
+        text-align: right;
+        white-space: normal;
+      }
+
+      .metric-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .folder-body {
+        min-height: 560px;
+      }
+
+      .travel-photo {
+        min-height: 280px;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .page {
+        width: min(100% - 22px, 1160px);
+        padding-top: 12px;
+      }
+
+      .topbar {
+        position: static;
+        border-radius: 8px;
+      }
+
+      .nav {
+        display: none;
+      }
+
+      .hero-hi {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 8px;
+      }
+
+      .hero,
+      .section-card {
+        padding: 18px;
+      }
+
+      .section-inner {
+        padding: 0;
+      }
+
+      .section-badge {
+        grid-template-columns: 54px minmax(0, 1fr);
+        gap: 16px;
+        min-height: 84px;
+        padding: 16px;
+      }
+
+      .badge-symbol {
+        width: 44px;
+        height: 44px;
+      }
+
+      .badge-title {
+        font-size: 24px;
+      }
+
+      .badge-title strong {
+        display: block;
+        margin-left: 0;
+        margin-top: 4px;
+        font-size: 35px;
+      }
+
+      .section-cutout {
+        width: 118px;
+        opacity: 0.18;
+        right: 12px;
+        top: 12px;
+      }
+
+      .portrait {
+        width: 136px;
+        height: 168px;
+      }
+
+      .portrait.home-cutout {
+        width: 158px;
+        height: 196px;
+      }
+
+      .proof-grid,
+      .experience-grid,
+      .profile-stats,
+      .research-cards,
+      .donut-wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .metric-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .content-item {
+        grid-template-columns: 46px minmax(0, 1fr);
+      }
+
+      .content-item strong {
+        grid-column: 2;
+      }
+
+      .tab-strip {
+        padding-left: 6px;
+      }
+
+      .tab-strip label {
+        min-width: 132px;
+        padding: 12px 14px;
+      }
+
+      .folder-body {
+        min-height: 650px;
+        padding: 18px;
+      }
+
+      .skill-note {
+        position: relative;
+        width: 100%;
+        top: auto;
+        left: auto;
+        margin-bottom: 12px;
+        transform: none !important;
+      }
+
+      .stacked-cards {
+        min-height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="回到首页">
+        <span class="brand-mark"><img src="material/cutouts/cutout-metro.png" alt=""></span>
+        <span>Althea Hao</span>
+      </a>
+      <nav class="nav" aria-label="页面导航">
+        <a href="#ai-builder">AI BUILDER</a>
+        <a href="#travel-influencer">TRAVEL INFLUENCER</a>
+        <a href="#urban-analyst">URBAN ANALYST</a>
+        <a href="#ability-box">ABILITY BOX</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div>
+          <h1 id="hero-title"><span class="hero-hi">Hi, 我是</span><span>郝天淏</span></h1>
+          <div class="identity-lines" aria-label="个人身份介绍">
+            <p>I'm an <span class="identity-highlight">AI Builder</span>.</p>
+            <p>A <span class="identity-highlight pink">Travel Influencer</span>.</p>
+            <p>An <span class="identity-highlight">Urban Analyst</span>.</p>
+            <p>And a <span class="identity-highlight pink">multifaceted product thinker</span>.</p>
+          </div>
+          <div class="hero-tags">
+            <a class="pill" href="mailto:13820652266@163.com">13820652266@163.com</a>
+            <a class="pill" href="tel:13820652266">13820652266</a>
+            <span class="pill">同济大学 · 城市设计</span>
+            <span class="pill">小红书：午安呆呆天</span>
+          </div>
+        </div>
+
+        <aside class="profile-card" aria-label="个人名片">
+          <div class="portrait home-cutout">
+            <img src="material/cutouts/cutout-metro.png" alt="郝天淏人物贴纸">
+          </div>
+          <h2>Althea Hao</h2>
+          <p>AI Product · Travel Content · Urban Analysis</p>
+          <div class="contact-mini">
+            <span><i class="dot">S</i> GPA 4.53/5.0 · CET-6 515 · IELTS 6.5</span>
+            <span><i class="dot">X</i> 小红书号 174977815</span>
+            <span><i class="dot">A</i> Codex / Claude / GPT / Gemini</span>
+          </div>
+        </aside>
+      </section>
+
+      <section id="ai-builder" class="section-card">
+        <div class="section-inner">
+          <div class="section-badge">
+            <div class="badge-kicker">Structure 01</div>
+            <div class="badge-symbol icon-ai" aria-hidden="true"></div>
+            <div class="badge-title">I'm an <strong>AI Builder</strong></div>
+          </div>
+          <div class="section-content-card">
+            <img class="section-cutout cutout-ai" src="material/cutouts/cutout-white-dress.png" alt="">
+            <div class="section-label">I'm an AI Builder</div>
+            <h2>我把所有产品经历都放在这里：从 AI 后台、玄学小程序到内容 IP。</h2>
+            <p class="section-copy">
+              这个板块集中呈现我的产品实践：业务问题拆解、AI 工具链、PRD 与原型、Prompt 调优、内容产品化和从想法到落地的验证过程。
+            </p>
+            <div class="proof-grid">
+              <div class="proof">
+                <strong>92%</strong>
+                <span>智能助手问题解决率</span>
+              </div>
+              <div class="proof">
+                <strong>75%</strong>
+                <span>人工处理成本降低</span>
+              </div>
+              <div class="proof">
+                <strong>100+</strong>
+                <span>多平台内容发布</span>
+              </div>
+            </div>
+
+            <div class="experience-grid">
+              <article class="experience">
+                <div class="meta"><span>2025.12 - 2026.3</span><span>产品经理</span></div>
+                <h3>上海沣莹信息科技有限公司 · 垂类 AI ToB 后台</h3>
+                <ul class="clean-list">
+                  <li>面向地铁公司工程项目管理场景，构建“交流圈”“参数字典”“智能助手”等功能。</li>
+                  <li>通过 Claude Code 等工具快速验证设想，推动 MVP 落地，线上交易转化率达到 90%。</li>
+                  <li>接入 LLM 完成字段统一、异常数据清洗与咨询自动应答，问题解决率达 92%。</li>
+                </ul>
+              </article>
+
+              <article class="experience">
+                <div class="meta"><span>2026.4 - 2026.5</span><span>产品经理</span></div>
+                <h3>算一算 · AI 玄学小程序</h3>
+                <ul class="clean-list">
+                  <li>针对同质化和内容单调问题，打造具备多种场景与趣味性的玄学小程序。</li>
+                  <li>调研 4 款竞品，输出体验优化方案，并用 Vibe Coding 独立产出 HTML 原型。</li>
+                  <li>参与模型选型与评测，针对玄学情感寄托场景做 Prompt Engineering 调优。</li>
+                </ul>
+              </article>
+
+              <article class="experience">
+                <div class="meta"><span>2023.7 - 至今</span><span>项目负责人</span></div>
+                <h3>西红柿公社 · 多模态 IP 孵化</h3>
+                <ul class="clean-list">
+                  <li>推出红色故事 IP，负责文字内容、视觉方案、公众号、小红书、Bilibili 等平台推广。</li>
+                  <li>研究爆款视频逻辑并借助 AI 工具提升剪辑与内容生产效率。</li>
+                  <li>累计发布 100+ 视频与文章，收获 1000+ 粉丝、10 万+ 点阅，累计变现 1w+。</li>
+                </ul>
+              </article>
+
+              <article class="experience">
+                <div class="meta"><span>2026.3 - 2026.5</span><span>独立开发者</span></div>
+                <h3>AI Agent 工程链探索</h3>
+                <ul class="clean-list">
+                  <li>基于 SDD 开发体系，探索从 PRD 到部署的自动化工程协作链路。</li>
+                  <li>结合 Harness、Superpower、TDD 与 Codex，打通设计文档上下文和工程实现过程。</li>
+                  <li>通过网站搭建与 Skill 二轮调优验证 AI Agent 辅助产品交付的可行性。</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="travel-influencer" class="section-card">
+        <div class="section-inner">
+          <div class="section-badge">
+            <div class="badge-kicker">Structure 02</div>
+            <div class="badge-symbol icon-travel" aria-hidden="true"></div>
+            <div class="badge-title">I'm a <strong>Travel Influencer</strong></div>
+          </div>
+          <div class="section-content-card">
+            <img class="section-cutout cutout-travel" src="material/cutouts/cutout-lakeside.png" alt="">
+            <div class="section-label">I'm a Travel Influencer</div>
+            <h2>我把旅行经验整理成<em>能被搜索、能被复盘</em>的内容。</h2>
+            <p class="section-copy">
+              小红书账号“午安呆呆天”围绕研 0、留 0、旅行攻略、审美日常和成长记录展开。下面不是截图，而是根据你提供的主页和数据中心信息复现的网页数据看板。
+            </p>
+
+            <div class="dashboard" aria-label="小红书账号数据看板">
+              <div class="dash-top">
+                <article class="account-card">
+                  <div class="account-head">
+                    <div class="avatar">
+                      <img src="material/个人照片01.jpg" alt="小红书头像">
+                    </div>
+                    <div>
+                      <h3>午安呆呆天</h3>
+                      <p>小红书号：174977815 · IP：福建</p>
+                      <p>研 0 × 留 0 | 奋斗与进步与玩耍的日常</p>
+                    </div>
+                  </div>
+                  <div class="profile-stats">
+                    <div class="profile-stat"><b>238</b><span>关注</span></div>
+                    <div class="profile-stat"><b>93</b><span>粉丝</span></div>
+                    <div class="profile-stat"><b>1832</b><span>获赞与收藏</span></div>
+                  </div>
+                </article>
+
+                <article class="rank-card">
+                  <div class="rank-orbit" aria-hidden="true"></div>
+                  <h3>观看数超过同类</h3>
+                  <p>账号诊断显示：观看数 204，超过 96% 同类创作者。</p>
+                </article>
+              </div>
+
+              <div class="metric-grid">
+                <div class="metric"><span>曝光数</span><b>853</b><small class="down">环比 -27%</small></div>
+                <div class="metric"><span>观看数</span><b>204</b><small class="down">环比 -30%</small></div>
+                <div class="metric"><span>封面点击率</span><b>23.3%</b><small class="down">环比 -2%</small></div>
+                <div class="metric"><span>平均观看时长</span><b>30.2秒</b><small class="up">环比 +18%</small></div>
+                <div class="metric"><span>观看总时长</span><b>1.1小时</b><small class="down">环比 -28%</small></div>
+                <div class="metric"><span>视频完播率</span><b>0%</b><small class="down">环比 -100%</small></div>
+              </div>
+
+              <div class="dash-charts">
+                <article class="chart-card">
+                  <h3>观看趋势 · 07-12 至 07-18</h3>
+                  <div class="line-chart" aria-label="观看趋势折线图">
+                    <svg viewBox="0 0 640 230" role="img" aria-label="观看数据先上升后回落的折线图">
+                      <polyline points="24,160 118,150 212,54 306,82 400,108 494,122 600,142" fill="none" stroke="#9b7cc6" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                      <circle cx="24" cy="160" r="5" fill="#9b7cc6"/>
+                      <circle cx="118" cy="150" r="5" fill="#9b7cc6"/>
+                      <circle cx="212" cy="54" r="5" fill="#9b7cc6"/>
+                      <circle cx="306" cy="82" r="5" fill="#9b7cc6"/>
+                      <circle cx="400" cy="108" r="5" fill="#9b7cc6"/>
+                      <circle cx="494" cy="122" r="5" fill="#9b7cc6"/>
+                      <circle cx="600" cy="142" r="5" fill="#9b7cc6"/>
+                      <text x="18" y="220">07-12</text>
+                      <text x="194" y="220">07-14</text>
+                      <text x="386" y="220">07-16</text>
+                      <text x="568" y="220">07-18</text>
+                    </svg>
+                  </div>
+                </article>
+
+                <article class="chart-card">
+                  <h3>观看来源</h3>
+                  <div class="donut-wrap">
+                    <div class="donut" aria-label="搜索占比 86% 的圆环图"></div>
+                    <div class="source-list">
+                      <div class="source-row"><span>搜索</span><b>86%</b></div>
+                      <div class="source-row"><span>视频推荐</span><b>3%</b></div>
+                      <div class="source-row"><span>个人主页</span><b>2%</b></div>
+                      <div class="source-row"><span>其他来源</span><b>9%</b></div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <article class="content-card">
+                <h3>新增观看最多的笔记</h3>
+                <div class="content-list">
+                  <div class="content-item">
+                    <div class="thumb">01</div>
+                    <div>
+                      <h4>最全的伊斯坦布尔 CityBuy 指南来啦！</h4>
+                      <p>2026-02-16 13:30 发布 · 点赞 +4 · 评论 +0</p>
+                    </div>
+                    <strong>观看 +155</strong>
+                  </div>
+                  <div class="content-item">
+                    <div class="thumb">02</div>
+                    <div>
+                      <h4>上海-南京红山动物园丝滑攻略 2026</h4>
+                      <p>2026-03-24 12:24 发布 · 点赞 +0 · 评论 +0</p>
+                    </div>
+                    <strong>观看 +35</strong>
+                  </div>
+                  <div class="content-item">
+                    <div class="thumb">03</div>
+                    <div>
+                      <h4>3min 讲清冬季土耳其 | 上篇</h4>
+                      <p>2026-02-11 16:26 发布 · 点赞 +2 · 评论 +0</p>
+                    </div>
+                    <strong>观看 +12</strong>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="urban-analyst" class="section-card">
+        <div class="section-inner">
+          <div class="section-badge">
+            <div class="badge-kicker">Structure 03</div>
+            <div class="badge-symbol icon-urban" aria-hidden="true"></div>
+            <div class="badge-title">I'm an <strong>Urban Analyst</strong></div>
+          </div>
+          <div class="section-content-card">
+            <img class="section-cutout cutout-urban" src="material/cutouts/cutout-bosphorus.png" alt="">
+            <div class="section-label">I'm an Urban Analyst</div>
+            <h2>我从城市空间里寻找<em>用户行为和产品机会</em>。</h2>
+            <p class="section-copy">
+              城市设计背景让我天然关注空间、流线、场所体验和人群需求。我会用空间分析、社媒数据和用户研究，把“城市里的感受”翻译成可分析的线索。
+            </p>
+            <div class="urban-grid">
+              <figure class="travel-photo cutout-frame">
+                <img src="material/cutouts/cutout-bosphorus.png" alt="郝天淏人物贴纸">
+              </figure>
+              <div class="research-cards">
+                <article class="research-card">
+                  <h3>教育背景</h3>
+                  <p>同济大学建筑与城市规划学院 · 城市设计专业，GPA 4.53/5.0，CET-6 515，IELTS 6.5。</p>
+                </article>
+                <article class="research-card">
+                  <h3>空间分析</h3>
+                  <p>使用 Depthmap、SDNA、ArcGIS 与 Arcpy 分析城市空间形态、交通关系、POI 和邻近性。</p>
+                </article>
+                <article class="research-card">
+                  <h3>社媒数据</h3>
+                  <p>爬取小红书平台数据，用 AHP 层次分析法完成词云数据的定性转定量。</p>
+                </article>
+                <article class="research-card">
+                  <h3>用户研究</h3>
+                  <p>结合 5000+ 社区评论、访谈和问卷，提炼用户画像，并提出产品优化建议。</p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="ability-box" class="section-card">
+        <div class="section-inner">
+          <div class="section-badge">
+            <div class="badge-kicker">Structure 04</div>
+            <div class="badge-symbol icon-box" aria-hidden="true"></div>
+            <div class="badge-title">Here's my <strong>Ability Box</strong></div>
+          </div>
+          <div class="section-content-card">
+            <img class="section-cutout cutout-ability" src="material/cutouts/cutout-metro.png" alt="">
+            <div class="section-label">Ability Box</div>
+            <h2>一个可以点击翻阅的能力盒子。</h2>
+            <div class="folder-tabs">
+              <input id="folder-ai" type="radio" name="folder" checked>
+              <input id="folder-product" type="radio" name="folder">
+              <input id="folder-data" type="radio" name="folder">
+              <input id="folder-visual" type="radio" name="folder">
+
+              <div class="tab-strip" role="tablist" aria-label="能力盒子标签">
+                <label for="folder-ai" role="tab">AI 技术栈</label>
+                <label for="folder-product" role="tab">产品原型</label>
+                <label for="folder-data" role="tab">数据分析</label>
+                <label for="folder-visual" role="tab">视觉美工</label>
+              </div>
+
+              <div class="folder-body">
+                <article class="folder-panel panel-ai">
+                  <div class="folder-title">
+                    <h3>AI 技术栈</h3>
+                    <p>用 AI 加速需求澄清、原型构建、内容生产和工程验证。</p>
+                  </div>
+                  <div class="stacked-cards">
+                    <div class="skill-note"><b>Codex / Claude Code</b><span>快速搭建网页、验证产品想法、辅助工程链路。</span></div>
+                    <div class="skill-note"><b>GPT / Gemini / Claude</b><span>需求分析、Prompt 调优、内容结构和模型体验评测。</span></div>
+                    <div class="skill-note"><b>Lovable / Vibe Coding</b><span>把 PRD、界面设想和交互流程快速转成可体验 Demo。</span></div>
+                  </div>
+                </article>
+
+                <article class="folder-panel panel-product">
+                  <div class="folder-title">
+                    <h3>产品原型</h3>
+                    <p>从模糊需求到清楚页面，建立业务目标、用户路径、关键功能和验证指标。</p>
+                  </div>
+                  <div class="stacked-cards">
+                    <div class="skill-note"><b>PRD 与流程</b><span>需求拆解、功能边界、版本节奏、验收标准。</span></div>
+                    <div class="skill-note"><b>Figma / 墨刀 / Xmind</b><span>交互线框、信息架构、用户路径和竞品分析。</span></div>
+                    <div class="skill-note"><b>ToB 后台经验</b><span>交流圈、参数字典、智能助手、数据清洗等业务场景。</span></div>
+                  </div>
+                </article>
+
+                <article class="folder-panel panel-data">
+                  <div class="folder-title">
+                    <h3>数据分析</h3>
+                    <p>用数据、访谈和空间分析为产品判断补充依据。</p>
+                  </div>
+                  <div class="stacked-cards">
+                    <div class="skill-note"><b>Excel / SQL / Python</b><span>数据清洗、基础分析、指标拆解和研究验证。</span></div>
+                    <div class="skill-note"><b>ArcGIS / Arcpy</b><span>城市片区、POI、邻近性和空间要素分析。</span></div>
+                    <div class="skill-note"><b>用户研究</b><span>问卷、访谈、评论分析、用户画像和优化建议。</span></div>
+                  </div>
+                </article>
+
+                <article class="folder-panel panel-visual">
+                  <div class="folder-title">
+                    <h3>视觉美工</h3>
+                    <p>关注信息节奏、视觉层级和用户愿不愿意继续看下去。</p>
+                  </div>
+                  <div class="stacked-cards">
+                    <div class="skill-note"><b>可画 / 秀米</b><span>图文内容、公众号排版、活动传播物料。</span></div>
+                    <div class="skill-note"><b>Photoshop / Illustrator</b><span>视觉方案、封面设计、图像处理和基础设计资产。</span></div>
+                    <div class="skill-note"><b>InDesign</b><span>长文档、剧本产品和出版物版式组织。</span></div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <h2>把新鲜想法做成柔软、清楚、可验证的产品。</h2>
+        <p>Althea Hao · 13820652266@163.com · 13820652266</p>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
